@@ -35,11 +35,9 @@ int main(void)
 {
     int i, j, arrSize, count = 0, sum = 0;
     int array[10000];
-
     printf("Please enter array size: \n");
     scanf("%d", &arrSize);
     printf("Enter numbers: \n");
-
     for (i = 0; i < arrSize; i++)
     {
         scanf("%d", &array[i]);
@@ -53,21 +51,18 @@ int main(void)
             {
                 array[j] = array[j + 1];
             }
-            count++;
             i--;
+            arrSize--;
+        }
+        else
+        {
+            sum += array[i];
         }
     }
-    int sizeAfter = arrSize - count;
-    int after[sizeAfter];
-    for (i = 0; i < sizeAfter; i++)
-    {
-        after[i] = array[i];
-        sum += after[i];
-    }
     printf("Array after deletion is: \n");
-    for (i = 0; i < sizeAfter; i++)
+    for (i = 0; i < arrSize; i++)
     {
-        printf("%d  ", after[i]);
+        printf("%d  ", array[i]);
     }
     printf("\nSum of the elements are: %d\n", sum);
 
