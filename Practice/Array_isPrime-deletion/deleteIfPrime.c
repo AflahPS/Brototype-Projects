@@ -37,23 +37,31 @@ int main(void)
     int array[10000];
     printf("Please enter array size: \n");
     scanf("%d", &arrSize);
+    // Getting array elements
     printf("Enter numbers: \n");
     for (i = 0; i < arrSize; i++)
     {
         scanf("%d", &array[i]);
     }
+    //Process
     for (i = 0; i < arrSize; i++)
     {
+        //check if prime
         if (isPrime(array[i]) == 1)
         {
             printf("%d is prime\n", array[i]);
+            //Delete if prime by shifting elements of i+1 to i by 
+            //another loop
             for (j = i; j < arrSize - 1; j++)
             {
                 array[j] = array[j + 1];
             }
+            //Decrement to check if the shifted value is prime or not
             i--;
+            //Decrement of array-Size after deletion
             arrSize--;
         }
+        // if not prime gettimg the sum of non-Prime elements
         else
         {
             sum += array[i];
