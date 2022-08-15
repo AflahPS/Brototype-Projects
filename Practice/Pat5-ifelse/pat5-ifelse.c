@@ -22,14 +22,11 @@ int main(void)
                 {
                     printf("%d ", count++);
                 }
-                else if (j > 1 && j < 2 * i - 1 && j == i)
+                
+                else if (j > 1 && j < 2 * i - 1 && j >= i)
                 {
-                    printf("%d ", count);
-                }
-                else if (j > 1 && j < 2 * i - 1 && j > i)
-                {
-                    count--;
-                    printf("%d ", count);
+                    
+                    printf("%d ", count--);
                 }
             }
             else if (i > h && j <= 2 * (2 * h - i) - 1)
@@ -42,14 +39,11 @@ int main(void)
                 {
                     printf("%d ", count++);
                 }
-                else if (j > 1 && j < 2 * (2 * h - i) - 1 && j == 2 * h - i)
+                
+                else if (j > 1 && j < 2 * (2 * h - i) - 1 && j >= 2 * h - i)
                 {
-                    printf("%d ", count);
-                }
-                else if (j > 1 && j < 2 * (2 * h - i) - 1 && j > 2 * h - i)
-                {
-                    count--;
-                    printf("%d ", count);
+                    printf("%d ", count--);
+                    
                 }
             }
         }
