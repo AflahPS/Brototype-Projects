@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//Function to check if prime
 int isPrime(int num)
 {
     int flag, i;
